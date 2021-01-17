@@ -7,7 +7,7 @@ import random
 
 debug = True
 
-author = "Marco Gutierrez"
+author = "Nestor Iván Apaza & Luis Fernando Leyva"
 
 doc = """
 Dynamic Quiz for Understanding of a Design 
