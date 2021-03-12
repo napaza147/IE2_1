@@ -1,0 +1,34 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block app_styles %}
+<style>
+    .otree-form-errors {
+        display: none;
+    }
+</style>
+{% endblock %}
+
+
+{% block title %}
+<font color="burlywood"><h4 align="right">Tu ID: {{ participant_id }}</h4></font>
+    Pregunta {{ page_number }}
+{% endblock %}
+
+
+{% block content %}
+
+<br>
+    <p>{{ question }}</p>
+    {% formfields %}
+
+{% if player.q_incorrect_attempts > 0 %}
+        <p><font color=#b94a48>{{ incorrect_answer }}</p>
+        </font>
+{% endif %}
+
+    <button class="otree-btn-next btn btn-primary">Siguiente</button>
+
+<br><br>
+{% include Constants.contact_template %}
+{% endblock %}

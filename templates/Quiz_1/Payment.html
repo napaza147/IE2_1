@@ -1,0 +1,100 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Balance de pagos recibidos en el experimento por el participante {{quiz_earnings}}
+{% endblock %}
+
+{% block content %}
+
+</p>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+
+<table style="width:70%" align="center">
+  <tr>
+    <th> <center> Concepto </center></th>
+    <th> <center> Monto </center> </th>
+  </tr>
+  <tr>
+    <td> Participación del experimento </td>
+    <td> 5.00 PEN </td>
+  </tr>
+  <tr>
+    <td> Bonus por contestar correctamente la pregunta N°1 </td>
+    <td>
+      {% if ea1 == 0 %}
+              0.00 PEN
+      {% else %}
+              0.20 PEN
+      {% endif %}
+    </td>
+  </tr>
+  <tr>
+    <td>Bonus por contestar correctamente la pregunta N°2 </td>
+    <td>
+      {% if ea2 == 0 %}
+              0.00 PEN
+      {% else %}
+              0.20 PEN
+      {% endif %}
+    </td>
+  </tr>
+    <tr>
+    <td> Bonus por contestar correctamente la pregunta N°3 </td>
+    <td>
+      {% if ea3 == 0 %}
+              0.00 PEN
+      {% else %}
+              0.20 PEN
+      {% endif %}
+    </td>
+  </tr>
+    <tr>
+    <td> Bonus por contestar correctamente la pregunta N°4 </td>
+    <td>
+      {% if ea4 == 0 %}
+              0.00 PEN
+      {% else %}
+              0.20 PEN
+      {% endif %}
+    </td>
+  </tr>
+    <tr>
+    <td> Total </td>
+    <td>
+      {{pago_final}} PEN
+    </td>
+  </tr>
+</table>
+
+<p>
+
+
+</p>
+
+<br>
+Para proceder con tu pago, entra al enlace abajo. Este enlace te redirigirá a un formulario para brindar la información
+para que recibas tu pago.
+<br><br>
+<a target="_blank" href="https://forms.gle/bdeJJVWAVRMKUCTm8">https://forms.gle/bdeJJVWAVRMKUCTm8</a>
+</br><br>
+Además, deberás colocar tu etiqueta de participante: <h4 align="middle">{{ participant_id }}</h4>
+<br><br>
+Los datos que brindes en ese formulario no se combinarán con los datos de la interacción y no afectarán el monto de tu
+pago .
+<br><br>
+Si tienes algún problema durante el experimento o si tienes una consulta, escribe a este correo: e2lab@up.edu.pe,
+o envía un mensaje al siguiente número de teléfono +51 985 488 009
+<br><br>
+¡Gracias, nuevamente!
+<br><br>
+E2Lab UP
+<br>
+    {% include Constants.instructions_button %}
+<br><br>
+{% include Constants.contact_template %}
+{% endblock %}

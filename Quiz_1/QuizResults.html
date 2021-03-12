@@ -1,0 +1,37 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block app_styles %}
+<style>
+    .otree-form-errors {
+        display: none;
+    }
+</style>
+{% endblock %}
+
+{% block title %}
+<font color="burlywood"><h4 align="right">Tu ID: {{ participant_id }}</h4></font>
+Resultados
+{% endblock %}
+
+{% block content %}
+
+<br>
+
+<p>Gracias. Has completado el quiz.</p>
+
+<p>Has respondido {{ player.num_correct }} de 4 preguntas correctamente.</p>
+
+<p>Entonces, has ganado {{ quiz_earnings }} centavos adicionales en este cuestionario.</p>
+
+<p>Al dar click al botón "Siguiente", comenzarás la tarea principal.</p>
+
+<br>
+
+    <input type="hidden" name="quiz_dec_2"/>
+    {{ form.quiz_dec_2.errors }}
+    <button class="otree-btn-next btn btn-primary">Siguiente</button>
+
+<br><br>
+{% include Constants.contact_template %}
+{% endblock %}

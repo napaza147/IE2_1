@@ -1,0 +1,28 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block app_styles %}
+<style>
+    .otree-form-errors {
+        display: none;
+    }
+</style>
+{% endblock %}
+
+{% block title %}
+<font color="burlywood"><h4 align="right">Tu ID: {{ participant_id }}</h4></font>
+PARTE I{% endblock %}
+{% block content %}
+<p>
+    A continuación, usted responderá brevemente un <b>cuestionario de 4 preguntas </b>para determinar su entendimiento de las instrucciones.
+
+<li>Recibirá <b>20 centavos por cada pregunta correcta</b>.</li>
+<li>Las ganancias que obtenga en cada pregunta se sumarán a las obtenidas en las preguntas anteriores.</li>
+
+</p>
+
+   <button class="otree-btn-next btn btn-primary">Empezar la PARTE I</button>
+
+<br><br>
+{% include Constants.contact_template %}
+{% endblock %}
