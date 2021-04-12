@@ -11,6 +11,8 @@ import time
 debug = True
 """Instructions Pages"""
 
+class Bienvenida(Page):
+    pass
 
 class Instrucciones(Page):
 
