@@ -18,3 +18,5 @@ REAL_WORLD_CURRENCY_CODE = ''
 REAL_WORLD_CURRENCY_DECIMAL_PLACES = 2
 USE_POINTS = False
 ```
+
+Los decimales se redondean a 2 dígitos.
