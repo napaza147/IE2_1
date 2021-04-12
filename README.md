@@ -10,5 +10,7 @@ SESSION_CONFIGS = [
             app_sequence=['Quiz_1', 'Choices', 'Quiz_2', 'Biases']
      ),
 ]
-
+PARTICIPANT_FIELDS=['non_smoker','e1','e2','e3','e4']
+REAL_WORLD_CURRENCY_CODE = ''
+USE_POINTS = False
 ```
