@@ -197,6 +197,7 @@ class Payment(Page):
 
 # Add QuizPage as questions on your quiz
 page_sequence = [
+    Bienvenida,
     Instrucciones,
     Introduction,
     QuizPage,
