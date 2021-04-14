@@ -138,9 +138,9 @@ class Player(BasePlayer):
     time_spent_on_instructions = models.FloatField(initial=0)
 
     # Preguntas del escenario de control
-    control_1 = models.IntegerField(label="Durante el año 2021, ¿Usted ha consumido cigarrillos de forma habitual (por lo menos 1 cada 90 días)?", choices=[[0, "No"], [1, "Sí"]], widget=widgets.RadioSelect)
-    control_2 = models.IntegerField(label="Durante el año 2020, ¿Usted ha consumido cigarrillos de forma habitual (por lo menos 1 cada 90 días)?", choices=[[0, "No"], [1, "Sí"]], widget=widgets.RadioSelect)
-    control_3 = models.IntegerField(label="Antes del confinamiento (2019), ¿Usted ha consumido cigarrillos de forma habitual (por lo menos 1 cada 90 días)?", choices=[[0, "No"], [1, "Sí"]], widget=widgets.RadioSelect)
+    control_1 = models.IntegerField(label="Durante el año 2021, ¿Usted ha consumido cigarrillos?", choices=[[0, "No"], [1, "Sí"]], widget=widgets.RadioSelect)
+    control_2 = models.IntegerField(label="Durante el año 2020, ¿Usted ha consumido cigarrillos?", choices=[[0, "No"], [1, "Sí"]], widget=widgets.RadioSelect)
+    control_3 = models.IntegerField(label="Antes del confinamiento (2019), ¿Usted ha consumido cigarrillos?", choices=[[0, "No"], [1, "Sí"]], widget=widgets.RadioSelect)
 
     def current_field(self):
         return 'question_{}_response'.format(self.quiz_page_counter + 1)
