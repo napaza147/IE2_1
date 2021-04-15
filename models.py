@@ -138,7 +138,7 @@ class Player(BasePlayer):
     time_spent_on_instructions = models.FloatField(initial=0)
 
     # Preguntas del escenario de control
-    control_1 = models.IntegerField(label="Durante el año 2021, ¿Usted ha consumido cigarrillos?", choices=[[0, "No"], [1, "Sí"]], widget=widgets.RadioSelect)
+    control_1 = models.IntegerField(label="¿Usted ha consumido cigarrillos al menos una vez en su vida?", choices=[[0, "No"], [1, "Sí"]], widget=widgets.RadioSelect)
     control_2 = models.IntegerField(label="Durante el año 2020, ¿Usted ha consumido cigarrillos?", choices=[[0, "No"], [1, "Sí"]], widget=widgets.RadioSelect)
     control_3 = models.IntegerField(label="Antes del confinamiento (2019), ¿Usted ha consumido cigarrillos?", choices=[[0, "No"], [1, "Sí"]], widget=widgets.RadioSelect)
 
